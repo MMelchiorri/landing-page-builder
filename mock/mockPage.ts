@@ -23,10 +23,11 @@ export const mockPage: Page = {
       code: 'hero_banner',
       category: 'header',
       properties: {
+        id: 'hero_001',
         title: 'Welcome to Our Site',
         subtitle: 'We are glad to have you here.',
         backgroundImageUrl: {
-          url: 'https://unsplash.com/it/foto/un-uomo-con-gli-occhiali-seduto-di-fronte-a-un-gruppo-di-persone-XjIqMEkhLQQ',
+          url: '/image/img.png',
           alt: 'Hero Background',
         },
       },

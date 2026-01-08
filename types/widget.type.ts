@@ -9,14 +9,14 @@ export interface Widget {
   id: string
   code: string
   category: WidgetCategory
-  properties: WidgetBaseProperties
+  properties: HeroWidgetProperties | NavBarWidgetProperties
   order: number
 }
 
 interface WidgetBaseProperties {
   id: string
   title: string
-  description?: string
+  subtitle?: string
 }
 
 export interface HeroWidgetProperties extends WidgetBaseProperties {
