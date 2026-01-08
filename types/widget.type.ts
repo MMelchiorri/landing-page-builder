@@ -4,6 +4,6 @@ export interface Widget {
   id: string
   code: string
   category: WidgetCategory
-  properties: Record<string, string>
+  properties: Record<string, unknown>
   order: number
 }

@@ -6,12 +6,15 @@ interface WidgetRendererProps {
   widget: Widget
 }
 
-export const WidgetRenderer: React.FC<WidgetRendererProps> = ({ widget }) => {
+const WidgetRenderer: React.FC<WidgetRendererProps> = ({ widget }) => {
   switch (widget.code) {
     case 'hero_banner':
-      return <HeroWidget properties={widget.properties} />
+      return (
+        <HeroWidget properties={widget.properties as Record<string, string>} />
+      )
 
     default:
       return null
   }
 }
+export default WidgetRenderer
