@@ -7,7 +7,6 @@ export interface Page {
   id: string
   pageTitle: string
   slug: string
-  name: string
   description: string
   seoMetadata: SeoMetadata
   theme: Themes
