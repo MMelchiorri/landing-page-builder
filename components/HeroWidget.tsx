@@ -1,7 +1,20 @@
 import React from 'react'
 
+type heroWidgetProperties = {
+  title: string
+  subtitle: string
+  backgroundImageUrl?: {
+    url: string
+    alt: string
+  }
+  ctaText?: {
+    label: string
+    link: string
+  }
+}
+
 interface HeroWidgetProps {
-  properties: Record<string, string>
+  properties: heroWidgetProperties
 }
 
 export const HeroWidget: React.FC<HeroWidgetProps> = ({ properties }) => {

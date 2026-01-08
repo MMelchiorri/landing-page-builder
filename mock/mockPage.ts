@@ -25,31 +25,12 @@ export const mockPage: Page = {
       properties: {
         title: 'Welcome to Our Site',
         subtitle: 'We are glad to have you here.',
+        backgroundImageUrl: {
+          url: 'https://unsplash.com/it/foto/un-uomo-con-gli-occhiali-seduto-di-fronte-a-un-gruppo-di-persone-XjIqMEkhLQQ',
+          alt: 'Hero Background',
+        },
       },
       order: 1,
-    },
-    {
-      id: 'widget_002',
-      code: 'text_section',
-      category: 'body',
-      properties: {
-        text: 'This is a sample text section for the body of the page.',
-      },
-      order: 2,
-    },
-    {
-      id: 'widget_003',
-      code: 'cta_block',
-      category: 'body',
-      properties: { text: 'Sign Up Now', link: '/signup' },
-      order: 3,
-    },
-    {
-      id: 'widget_004',
-      code: 'simple_footer',
-      category: 'footer',
-      properties: { year: 2024, companyName: 'Example Inc.' },
-      order: 4,
     },
   ],
   accessibility: {
