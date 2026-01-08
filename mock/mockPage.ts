@@ -26,7 +26,7 @@ export const mockPage: Page = {
         id: 'hero_001',
         title: 'Welcome to Our Site',
         subtitle: 'We are glad to have you here.',
-        backgroundImageUrl: {
+        backgroundImage: {
           url: '/image/img.png',
           alt: 'Hero Background',
         },

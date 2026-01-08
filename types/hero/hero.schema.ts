@@ -5,7 +5,7 @@ export const HeroSchema = z.object({
   subtitle: z.string().optional(),
   backgroundImage: z
     .object({
-      url: z.url(),
+      url: z.string(),
       alt: z.string().optional(),
     })
     .optional(),
