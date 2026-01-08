@@ -1,22 +1,10 @@
 'use client'
 
 import React from 'react'
-
-type heroWidgetProperties = {
-  title: string
-  subtitle: string
-  backgroundImageUrl?: {
-    url: string
-    alt: string
-  }
-  ctaText?: {
-    label: string
-    link: string
-  }
-}
+import { HeroWidgetProperties } from '@/types/hero/hero.schema'
 
 interface HeroWidgetProps {
-  properties: heroWidgetProperties
+  properties: HeroWidgetProperties
 }
 
 export const HeroWidget: React.FC<HeroWidgetProps> = ({ properties }) => {
@@ -24,7 +12,7 @@ export const HeroWidget: React.FC<HeroWidgetProps> = ({ properties }) => {
     <div
       className="hero-widget"
       style={{
-        backgroundImage: `url(${properties.backgroundImageUrl?.url})`,
+        backgroundImage: `url(${properties.backgroundImage?.url})`,
         backgroundSize: 'contain',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

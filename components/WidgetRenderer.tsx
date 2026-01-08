@@ -1,5 +1,6 @@
-import { HeroWidgetProperties, Widget } from '@/types/widget.type'
-import { HeroWidget } from '@/components/HeroWidget'
+import { HeroSchema } from '@/types/hero/hero.schema'
+import { Widget } from '@/types/widget.type'
+import { HeroWidget } from '@/types/hero/HeroWidget'
 import React from 'react'
 
 interface WidgetRendererProps {
@@ -9,9 +10,12 @@ interface WidgetRendererProps {
 const WidgetRenderer: React.FC<WidgetRendererProps> = ({ widget }) => {
   switch (widget.code) {
     case 'hero_banner':
-      return (
-        <HeroWidget properties={widget.properties as HeroWidgetProperties} />
-      )
+      const parsed = HeroSchema.safeParse(widget.properties)
+      if (!parsed.success) {
+        console.error('Invalid hero widget properties', parsed.error)
+        return null
+      }
+      return <HeroWidget properties={parsed.data} />
 
     default:
       return null
