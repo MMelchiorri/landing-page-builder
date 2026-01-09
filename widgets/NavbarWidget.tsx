@@ -14,24 +14,24 @@ export const NavbarWidget: React.FC<NavbarWidgetProps> = ({ properties }) => {
       display={'flex'}
       flexDirection={'column'}
       alignItems={'center'}
-      padding={'20px'}
-      marginTop={'auto'}
       width={'100%'}
     >
       <Typography variant={'h6'}>{properties.brand?.name}</Typography>
-      <Box display={'flex'} gap={2} marginTop={1}>
-        {properties.links.map((link, index) => (
-          <IconButton
-            key={index}
-            href={link.url}
-            aria-label={link.text}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {link.text}
-          </IconButton>
-        ))}
-      </Box>
+      {properties.links && (
+        <Box display={'flex'} gap={2} marginTop={1}>
+          {properties.links.map((link, index) => (
+            <IconButton
+              key={index}
+              href={link.url}
+              aria-label={link.text}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.text}
+            </IconButton>
+          ))}
+        </Box>
+      )}
     </Box>
   )
 }

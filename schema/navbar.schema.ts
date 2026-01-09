@@ -12,7 +12,7 @@ export const NavbarSchema = z.object({
     .array(
       z.object({
         text: z.string().min(1).max(100),
-        url: z.url(),
+        url: z.string(),
       })
     )
     .max(10),
