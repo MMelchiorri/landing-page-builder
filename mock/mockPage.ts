@@ -19,6 +19,24 @@ export const mockPage: Page = {
   theme: 'modern',
   widgets: [
     {
+      id: 'widget_000',
+      code: 'navigation_bar',
+      category: 'header',
+      properties: {
+        id: 'nav_001',
+        links: [
+          { text: 'Home', url: '/', label: 'Home' },
+          { text: 'About', url: '/about', label: 'About' },
+          { text: 'Contact', url: '/contact', label: 'Contact' },
+        ],
+        logo: {
+          url: '/image/logo.png',
+          alt: 'Site Logo',
+        },
+      },
+      order: 0,
+    },
+    {
       id: 'widget_001',
       code: 'hero_card',
       category: 'header',

@@ -1,7 +1,7 @@
 'use client'
 
-import { HeroSchema, FooterSchema, TextSchema } from '@/schema'
-import { HeroWidget, TextWidget, FooterWidget } from '@/widget'
+import { HeroSchema, FooterSchema, TextSchema, NavbarSchema } from '@/schema'
+import { HeroWidget, TextWidget, FooterWidget, NavbarWidget } from '@/widget'
 import { Widget } from '@/types/generic/widget.type'
 import React from 'react'
 
@@ -11,6 +11,13 @@ interface WidgetRendererProps {
 
 const WidgetRenderer: React.FC<WidgetRendererProps> = ({ widget }) => {
   switch (widget.code) {
+    case 'navbar_block':
+      const parsedNavbar = NavbarSchema.safeParse(widget.properties)
+      if (!parsedNavbar.success) {
+        console.error('Invalid navbar widget properties', parsedNavbar.error)
+        return null
+      }
+      return <NavbarWidget properties={parsedNavbar.data} />
     case 'hero_card':
       const parsed = HeroSchema.safeParse(widget.properties)
       if (!parsed.success) {
