@@ -1,4 +1,4 @@
-import { Page } from '@/types/page.type'
+import { Page } from '@/types/generic/page.type'
 import React from 'react'
 import WidgetRenderer from '@/components/WidgetRenderer'
 

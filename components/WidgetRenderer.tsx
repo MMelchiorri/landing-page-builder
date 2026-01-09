@@ -1,5 +1,5 @@
 import { HeroSchema } from '@/types/hero/hero.schema'
-import { Widget } from '@/types/widget.type'
+import { Widget } from '@/types/generic/widget.type'
 import { HeroWidget } from '@/types/hero/HeroWidget'
 import React from 'react'
 
