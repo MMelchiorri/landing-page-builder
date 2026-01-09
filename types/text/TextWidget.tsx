@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import { TextWidgetProperties } from '@/types/text/text.schema'
 
 interface TextWidgetWidgetProps {
@@ -13,6 +13,12 @@ export const TextWidget: React.FC<TextWidgetWidgetProps> = ({ properties }) => {
     <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
       <Typography variant={'h2'}>{properties.title}</Typography>
       <Typography variant={'h2'}>{properties.subtitle}</Typography>
+      <Button
+        variant="contained"
+        href={properties.cta ? properties.cta.url : '#'}
+      >
+        {properties.cta ? properties.cta.text : 'Learn More'}
+      </Button>
     </Box>
   )
 }
