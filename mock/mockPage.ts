@@ -50,6 +50,24 @@ export const mockPage: Page = {
       },
       order: 2,
     },
+    {
+      id: 'widget_003',
+      code: 'footer_block',
+      category: 'footer',
+      properties: {
+        id: 'footer_001',
+        text: '© 2024 Example Company. All rights reserved.',
+        links: [
+          { text: 'Privacy Policy', url: '/privacy', label: 'Privacy Policy' },
+          {
+            text: 'Terms of Service',
+            url: '/terms',
+            label: 'Terms of Service',
+          },
+        ],
+      },
+      order: 3,
+    },
   ],
   accessibility: {
     contrastRatio: 'normal',
