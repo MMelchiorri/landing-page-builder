@@ -1,19 +1,14 @@
 'use client'
 
 import React from 'react'
-import { Box, IconButton, Button, Typography } from '@mui/material'
-import {
-  FooterSchema,
-  FooterWidgetProperties,
-} from '@/types/footer/footer.schema'
+import { Box, IconButton, Typography } from '@mui/material'
+import { FooterWidgetProperties } from '@/schema/footer.schema'
 
-interface TextWidgetWidgetProps {
+interface FooterWidgetProps {
   properties: FooterWidgetProperties
 }
 
-export const FooterWidget: React.FC<TextWidgetWidgetProps> = ({
-  properties,
-}) => {
+export const FooterWidget: React.FC<FooterWidgetProps> = ({ properties }) => {
   return (
     <Box
       display={'flex'}

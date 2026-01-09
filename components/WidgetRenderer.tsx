@@ -1,11 +1,9 @@
 'use client'
 
-import { HeroSchema } from '@/types/hero/hero.schema'
-import { TextSchema } from '@/types/text/text.schema'
+import { HeroSchema, FooterSchema, TextSchema } from '@/schema'
+import { HeroWidget, TextWidget, FooterWidget } from '@/widget'
 import { Widget } from '@/types/generic/widget.type'
-import { HeroWidget } from '@/types/hero/HeroWidget'
 import React from 'react'
-import { TextWidget } from '@/types/text/TextWidget'
 
 interface WidgetRendererProps {
   widget: Widget
@@ -27,6 +25,17 @@ const WidgetRenderer: React.FC<WidgetRendererProps> = ({ widget }) => {
         return null
       }
       return <TextWidget properties={parsedText.data} />
+
+    case 'footer_block':
+      const parsedFooter = FooterSchema.safeParse(widget.properties)
+      if (!parsedFooter.success) {
+        console.error(
+          'Invalid footer block widget properties',
+          parsedFooter.error
+        )
+        return null
+      }
+      return <FooterWidget properties={parsedFooter.data} />
 
     default:
       return null
