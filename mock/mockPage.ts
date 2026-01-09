@@ -1,4 +1,4 @@
-import { Page } from '@/types/generic/page.type'
+import { Page } from '@/domain/page.type'
 
 export const mockPage: Page = {
   id: 'page_001',

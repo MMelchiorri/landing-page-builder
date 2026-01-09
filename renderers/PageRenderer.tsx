@@ -1,6 +1,6 @@
-import { Page } from '@/types/generic/page.type'
+import { Page } from '@/domain/page.type'
 import React from 'react'
-import WidgetRenderer from '@/components/WidgetRenderer'
+import WidgetRenderer from '@/renderers/WidgetRenderer'
 import { Box } from '@mui/material'
 
 interface PageRendererProps {

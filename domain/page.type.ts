@@ -1,7 +1,7 @@
-import { SeoMetadata } from './seo.types'
-import { Widget } from '@/types/generic/widget.type'
-import { Accessibility } from '@/types/generic/accesibility.types'
-import { Themes } from '@/types/generic/theme.type'
+import { SeoMetadata } from '@/domain/seo.types'
+import { Widget } from '@/domain/widget.type'
+import { Accessibility } from '@/domain/accessibility.type'
+import { Themes } from '@/domain/theme.type'
 
 export interface Page {
   id: string

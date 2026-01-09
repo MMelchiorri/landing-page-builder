@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { widgetRegistry } from '@/widgets/registry'
-import { Widget } from '@/types/generic/widget.type'
+import { Widget } from '@/domain/widget.type'
 
 interface WidgetRendererProps {
   widget: Widget

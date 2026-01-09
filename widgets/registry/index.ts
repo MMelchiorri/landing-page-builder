@@ -1,6 +1,6 @@
 import { HeroSchema, FooterSchema, TextSchema, NavbarSchema } from '@/schema'
 import { HeroWidget, TextWidget, FooterWidget, NavbarWidget } from '@/widgets'
-import { WidgetDefinition } from '@/types/generic/widget-registry.type'
+import { WidgetDefinition } from '@/domain/widget-registry.type'
 
 export const widgetRegistry: Record<string, WidgetDefinition> = {
   navigation_bar: {

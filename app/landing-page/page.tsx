@@ -1,5 +1,5 @@
 import { mockPage } from '@/mock/mockPage'
-import { PageRenderer } from '@/components/PageRenderer'
+import { PageRenderer } from '@/renderers/PageRenderer'
 
 export default function LandingPage() {
   return <PageRenderer page={mockPage} />
