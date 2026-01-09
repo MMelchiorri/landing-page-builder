@@ -1,4 +1,4 @@
-import { Page } from '@/types/page.type'
+import { Page } from '@/types/generic/page.type'
 
 export const mockPage: Page = {
   id: 'page_001',
@@ -20,7 +20,7 @@ export const mockPage: Page = {
   widgets: [
     {
       id: 'widget_001',
-      code: 'hero_banner',
+      code: 'hero_card',
       category: 'header',
       properties: {
         id: 'hero_001',
@@ -32,6 +32,19 @@ export const mockPage: Page = {
         },
       },
       order: 1,
+    },
+    {
+      id: 'widget_002',
+      code: 'text_block',
+      category: 'body',
+      properties: {
+        id: 'text_001',
+        title: 'About Us',
+        subtitle: 'Learn more about our mission and values.',
+        align: 'left',
+        maxWidth: 'md',
+      },
+      order: 2,
     },
   ],
   accessibility: {
