@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Box, Typography } from '@mui/material'
-import { HeroWidgetProperties } from '@/types/hero/hero.schema'
+import { HeroWidgetProperties } from '@/schema/hero.schema'
 
 interface HeroWidgetProps {
   properties: HeroWidgetProperties

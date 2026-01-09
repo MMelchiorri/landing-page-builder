@@ -8,7 +8,7 @@ export const FooterSchema = z.object({
         text: z.string().min(1).max(100),
         label: z.string().min(1).max(50),
         icon: z.string().max(100).optional(),
-        url: z.url(),
+        url: z.string(),
       })
     )
     .max(10),

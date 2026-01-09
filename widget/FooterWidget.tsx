@@ -15,20 +15,22 @@ export const FooterWidget: React.FC<FooterWidgetProps> = ({ properties }) => {
       flexDirection={'column'}
       alignItems={'center'}
       padding={'20px'}
-      bgcolor={'#f5f5f5'}
+      marginTop={'auto'}
+      width={'100%'}
     >
       <Typography variant={'h6'}>{properties.text}</Typography>
-      {properties.links.map((link, index) => (
-        <IconButton
-          key={index}
-          href={link.url}
-          aria-label={link.label}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {link.icon}
-        </IconButton>
-      ))}
+      {properties.links &&
+        properties.links.map((link, index) => (
+          <IconButton
+            key={index}
+            href={link.url}
+            aria-label={link.label}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {link.icon}
+          </IconButton>
+        ))}
     </Box>
   )
 }
