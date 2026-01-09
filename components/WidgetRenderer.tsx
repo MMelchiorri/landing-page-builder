@@ -1,3 +1,5 @@
+'use client'
+
 import { HeroSchema } from '@/types/hero/hero.schema'
 import { TextSchema } from '@/types/text/text.schema'
 import { Widget } from '@/types/generic/widget.type'

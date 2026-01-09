@@ -13,6 +13,7 @@ export const TextWidget: React.FC<TextWidgetWidgetProps> = ({ properties }) => {
     <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
       <Typography variant={'h2'}>{properties.title}</Typography>
       <Typography variant={'h2'}>{properties.subtitle}</Typography>
+
       <Button
         variant="contained"
         href={properties.cta ? properties.cta.url : '#'}

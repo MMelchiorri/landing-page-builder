@@ -43,6 +43,10 @@ export const mockPage: Page = {
         subtitle: 'Learn more about our mission and values.',
         align: 'left',
         maxWidth: 'md',
+        cta: {
+          text: 'Read More',
+          url: 'https://www.example.com/about',
+        },
       },
       order: 2,
     },
