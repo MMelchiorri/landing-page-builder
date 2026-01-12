@@ -12,7 +12,6 @@ export const PageRenderer: React.FC<PageRendererProps> = ({ page }) => {
   const header = page.widgets.filter((w) => w.category === 'header')
   const body = page.widgets.filter((w) => w.category === 'body')
   const footer = page.widgets.filter((w) => w.category === 'footer')
-  console.log('PageRenderer render', { page, header, body, footer })
 
   return (
     <Box minHeight="100vh" display="flex" flexDirection="column">

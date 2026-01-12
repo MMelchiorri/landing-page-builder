@@ -39,7 +39,7 @@ export const mockPage: Page = {
     {
       id: 'widget_001',
       code: 'hero_card',
-      category: 'header',
+      category: 'body',
       properties: {
         id: 'hero_001',
         title: 'Welcome to Our Site',
