@@ -6,6 +6,7 @@ import { Widget } from '@/domain/widget.type'
 
 interface WidgetRendererProps {
   widget: Widget
+  style?: React.CSSProperties
 }
 
 const WidgetRenderer: React.FC<WidgetRendererProps> = ({ widget }) => {

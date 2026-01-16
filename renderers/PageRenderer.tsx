@@ -2,13 +2,14 @@ import WidgetRenderer from '@/renderers/WidgetRenderer'
 import { LayoutRoot } from '@/components/LayoutRoot'
 import React from 'react'
 import { WidgetCategory } from '@/domain/widget.type'
+import { LayoutConfig } from '@/components/config/layout.config'
 
 interface PageRendererProps {
   page: {
     widgets: Array<{
       id: string
-      category: WidgetCategory
       code: string
+      category: WidgetCategory
       properties: Record<string, any>
       order: number
     }>
