@@ -1,4 +1,6 @@
 import { Box } from '@mui/material'
+import { LayoutConfig } from '@/components/config/layout.config'
+import React from 'react'
 
 interface LayoutRootProps {
   header?: React.ReactNode

@@ -4,8 +4,8 @@ export const NavbarSchema = z.object({
   brand: z
     .object({
       name: z.string().min(1).max(50),
-      logoUrl: z.string().url().optional(),
-      link: z.string().url().optional(),
+      logoUrl: z.string().optional(),
+      link: z.string().optional(),
     })
     .optional(),
   links: z
