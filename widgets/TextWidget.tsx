@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Box, Button, Typography } from '@mui/material'
-import { TextWidgetProperties } from '@/types/text/text.schema'
+import { TextWidgetProperties } from '@/schema/text.schema'
 
 interface TextWidgetWidgetProps {
   properties: TextWidgetProperties

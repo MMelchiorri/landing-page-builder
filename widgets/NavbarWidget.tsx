@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Box, IconButton, Typography } from '@mui/material'
+import { Box, IconButton, Switch, Typography } from '@mui/material'
 import { NavbarWidgetProperties } from '@/schema/navbar.schema'
 
 interface NavbarWidgetProps {
@@ -12,9 +12,9 @@ export const NavbarWidget: React.FC<NavbarWidgetProps> = ({ properties }) => {
   return (
     <Box
       display={'flex'}
-      flexDirection={'column'}
       alignItems={'center'}
       width={'100%'}
+      justifyContent={'space-between'}
     >
       <Typography variant={'h6'}>{properties.brand?.name}</Typography>
       {properties.links && (
@@ -32,6 +32,11 @@ export const NavbarWidget: React.FC<NavbarWidgetProps> = ({ properties }) => {
           ))}
         </Box>
       )}
+      <Switch
+        sx={{
+          '& .MuiSwitch-thumb': {},
+        }}
+      />
     </Box>
   )
 }
